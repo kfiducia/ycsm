@@ -110,7 +110,7 @@ ycsm_initialize() {
 
   SSL_SRC="/etc/letsencrypt/live/$domain_name"
   ycsm_action "Obtaining Certificates..."
-  certbot certonly --nginx --non-interactive --quiet --register-unsafely-without-email --agree-tos -a webroot --webroot-path=/var/www/html -d $domain_name
+  certbot certonly --nginx --non-interactive --quiet --register-unsafely-without-email --agree-tos -d $domain_name
   check_errors
 
   ycsm_action "Installing Certificates..."
